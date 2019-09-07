@@ -22,5 +22,6 @@ Login refresh token
     
 
 You can use token with qiwi api https://developer.qiwi.com/ru/qiwi-wallet-personal/
+----------------
 But token validity only 30 minutes, after this use refresh func
----------
+----------------
