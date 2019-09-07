@@ -18,7 +18,7 @@ Login refresh token
 
     import qiwimobile
     wallet = qiwimobile.MobileQIWI()
-    wallet.refreshToken('1141a254525b1e1aca99297afc47f8d3', '2597') # refresh_token & mobile_pin
+    wallet.refreshToken('1141a254525b1e1aca99297afc47f8d3', '2597') # refresh_token from func 'inputPin' & mobile_pin
     
 
 You can use token with qiwi api https://developer.qiwi.com/ru/qiwi-wallet-personal/
