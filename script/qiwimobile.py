@@ -11,6 +11,7 @@ class MobileQIWI:
             self.refresh_token = refresh_token
             self.conf_id = None
             self.code = None
+            self.token = None
 
       def sendCode(self):
             if self.phone == None:
@@ -52,6 +53,8 @@ class MobileQIWI:
             if 'access_token' not in data.keys():
                   raise MobileError("'pin' not a valid")
             else:
+                  self.refresh_token = data['app_token']
+                  self.token = data['access_token']
                   return {'refresh_token':data['app_token'], 'token':data['access_token'], 'expires_in':data['expires_in']}
 
       def refreshToken(self, refresh_token=None, pin=None):
@@ -68,4 +71,5 @@ class MobileQIWI:
             if 'access_token' not in data.keys():
                   raise MobileError("'refresh_token' or 'pin' not a valid")
             else:
+                  self.token = data['access_token']
                   return {'token':data['access_token'], 'expires_in':data['expires_in']}
